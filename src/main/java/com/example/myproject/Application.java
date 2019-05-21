@@ -21,15 +21,18 @@ public class Application {
         // SpringApplication.run(Application.class, args);
     	
     	SpringApplication springApplication=new SpringApplication(Application.class);
+    	
+    	//If you do not want command line properties to be added to the Environment, you can disable them by using 
+    	//springApplication.setAddCommandLineProperties(false);
     	springApplication.run(args);   
     }
     
     //在应用启动之前就可以加载下面的方法
     
-    @Bean
-    public StartupRunner schedulerRunner() {
-        return new StartupRunner();
-    }
+//    @Bean
+//    public StartupRunner schedulerRunner() {
+//        return new StartupRunner();
+//    }
 
 }
 
